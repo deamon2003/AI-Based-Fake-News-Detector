@@ -112,3 +112,10 @@ Feel free to improve the detection algorithm by:
 
 This project is open source and available under the MIT License.
 # AI-Based-Fake-News-Detector
+
+
+<img width="1690" height="918" alt="Screenshot 2025-10-30 at 5 14 50 PM" src="https://github.com/user-attachments/assets/a6d98d01-39f2-438a-bc0b-fa557f060880" />
+
+
+
+
