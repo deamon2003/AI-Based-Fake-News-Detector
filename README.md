@@ -116,6 +116,9 @@ This project is open source and available under the MIT License.
 
 <img width="1690" height="918" alt="Screenshot 2025-10-30 at 5 14 50 PM" src="https://github.com/user-attachments/assets/a6d98d01-39f2-438a-bc0b-fa557f060880" />
 
+<img width="1252" height="874" alt="Screenshot 2025-10-30 at 5 15 21 PM" src="https://github.com/user-attachments/assets/d3d4f9e3-7079-4c3c-94e3-9950e4f7952e" />
+
+
 
 
 
