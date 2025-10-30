@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🕵️‍♂️ Fake News Detector</h1>
+        <form id="newsForm">
+            <div class="input-group">
+                <label for="newsText">Enter News Text:</label>
+                <textarea id="newsText" name="newsText" rows="10" placeholder="Paste or type your news article here..."></textarea>
+            </div>
+            <div class="input-group">
+                <label for="newsFile">Or Upload News Files (TXT) - Single or Multiple:</label>
+                <input type="file" id="newsFile" name="newsFile" accept=".txt" multiple>
+            </div>
+            <button type="submit">🔍 Detect Fake News</button>
+        </form>
+        <div id="result" class="result hidden">
+            <h2>📰 Detection Result:</h2>
+            <p id="resultText"></p>
+        </div>
+        <div id="batchResults" class="batch-results hidden">
+            <h2>📋 Batch Analysis Results:</h2>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>File Name</th>
+                        <th>Prediction</th>
+                        <th>Confidence</th>
+                        <th>Fake Score</th>
+                        <th>Real Score</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+textarea, input[type="file"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+textarea:focus, input[type="file"]:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background-color: white;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #5a6fd8, #6a4190);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease-in-out;
+    border: 2px solid transparent;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.result.real {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-color: #28a745;
+    color: #155724;
+    box-shadow: 0 10px 30px rgba(40, 167, 69, 0.2);
+}
+
+.result.fake {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    border-color: #dc3545;
+    color: #721c24;
+    box-shadow: 0 10px 30px rgba(220, 53, 69, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.batch-results {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #e1e8ed;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.batch-results h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+#resultsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    font-size: 1em;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#resultsTable th {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+#resultsTable td {
+    padding: 15px;
+    border-bottom: 1px solid #e1e8ed;
+    transition: all 0.3s ease;
+}
+
+#resultsTable tbody tr {
+    transition: all 0.3s ease;
+}
+
+#resultsTable tbody tr.fake {
+    background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+    color: #721c24;
+}
+
+#resultsTable tbody tr.real {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    color: #155724;
+}
+
+#resultsTable tbody tr:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#resultsTable tbody tr.fake:hover {
+    background: linear-gradient(135deg, #f5c2c7 0%, #f1aeb5 100%);
+}
+
+#resultsTable tbody tr.real:hover {
+    background: linear-gradient(135deg, #c8e6c9 0%, #b8daff 100%);
+}
